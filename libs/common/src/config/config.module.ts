@@ -13,7 +13,7 @@ import * as Joi from 'joi';
         MYSQL_PORT: Joi.number().required(),
         MYSQL_DATABASE: Joi.string().required(),
         MYSQL_USERNAME: Joi.string().required(),
-        MYSQL_PASSWORD: Joi.string().required(),
+        MYSQL_ROOT_PASSWORD: Joi.string().required(),
         MYSQL_SYNCHRONIZE: Joi.boolean(),
       }),
     }),

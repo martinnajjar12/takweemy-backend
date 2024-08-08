@@ -14,7 +14,7 @@ import { ConfigModule } from '../config/config.module';
         port: configService.getOrThrow('MYSQL_PORT'),
         database: configService.getOrThrow('MYSQL_DATABASE'),
         username: configService.getOrThrow('MYSQL_USERNAME'),
-        password: configService.getOrThrow('MYSQL_PASSWORD'),
+        password: configService.getOrThrow('MYSQL_ROOT_PASSWORD'),
         synchronize: configService.getOrThrow('MYSQL_SYNCHRONIZE'),
         autoLoadEntities: true,
       }),
