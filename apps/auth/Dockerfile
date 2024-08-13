@@ -25,4 +25,4 @@ RUN yarn install
 
 COPY --from=development /app/dist ./dist
 
-CMD ["node", "dist/apps/reservations/main"]
+CMD ["node", "dist/apps/auth/main"]

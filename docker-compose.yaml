@@ -11,18 +11,18 @@ services:
       - '3000:3000'
     volumes:
       - .:/usr/src/takweemy
-  # auth:
-  #   build:
-  #     context: .
-  #     dockerfile: ./apps/auth/Dockerfile
-  #     target: development
-  #   command: yarn run start:dev auth
-  #   env_file:
-  #     - ./apps/auth/.env
-  #   ports:
-  #     - '3001:3001'
-  #   volumes:
-  #     - .:/usr/src/takweemy
+  auth:
+    build:
+      context: .
+      dockerfile: ./apps/auth/Dockerfile
+      target: development
+    command: yarn run start:dev auth
+    env_file:
+      - ./apps/auth/.env
+    ports:
+      - '3001:3001'
+    volumes:
+      - .:/usr/src/takweemy
   # payments:
   #   build:
   #     context: .
@@ -44,7 +44,7 @@ services:
   #   volumes:
   #     - .:/usr/src/takweemy
   mysql:
-    image: mysql
+    image: mysql:5.7
     env_file:
       - .env
     ports:

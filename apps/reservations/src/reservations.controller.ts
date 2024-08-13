@@ -30,6 +30,11 @@ export class ReservationsController {
     return this.reservationsService.findOne(+id);
   }
 
+  @Get('newRoute/:id')
+  newRoute(@Param('id') id: string) {
+    return 'new route' + id;
+  }
+
   @Patch(':id')
   update(
     @Param('id') id: string,

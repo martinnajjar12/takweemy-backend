@@ -11,10 +11,7 @@ export class ReservationsService {
   ) {}
 
   async create(createReservationDto: CreateReservationDto) {
-    const reservation = new Reservation({
-      ...createReservationDto,
-      timestamp: new Date(),
-    });
+    const reservation = new Reservation(createReservationDto);
 
     return this.reservationsRepository.create(reservation);
   }
