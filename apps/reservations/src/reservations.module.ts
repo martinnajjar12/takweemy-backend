@@ -16,6 +16,7 @@ import { Reservation } from './entities/reservation.entity';
     DatabaseModule.forFeature([Reservation]),
     LoggerModule,
     ConfigModule.forRoot({
+      isGlobal: true,
       validationSchema: Joi.object({
         MYSQL_HOST: Joi.string().required(),
         MYSQL_PORT: Joi.number().required(),

@@ -1,5 +1,4 @@
 import {
-  IsEmail,
   IsNotEmpty,
   IsPhoneNumber,
   IsString,
@@ -9,17 +8,11 @@ import {
 import { IsValidRoleArray } from '@takweemy/common';
 
 export class CreateUserDto {
-  @IsEmail()
-  email: string;
-
   @IsPhoneNumber()
   phoneNumber: string;
 
   @IsStrongPassword()
   password: string;
-
-  @IsStrongPassword()
-  confirmPassword: string;
 
   @IsString()
   @IsNotEmpty()

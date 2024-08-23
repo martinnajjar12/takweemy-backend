@@ -1,9 +1,8 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
-import { AbstractRepository } from '@takweemy/common';
+import { AbstractRepository, User } from '@takweemy/common';
 
-import { User } from './entities/user.entity';
 import { EntityManager, Repository } from 'typeorm';
 
 @Injectable()
